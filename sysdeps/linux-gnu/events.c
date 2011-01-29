@@ -8,6 +8,7 @@
 #include <signal.h>
 #include <string.h>
 #include <sys/ptrace.h>
+#include <linux/ptrace.h>
 
 #include "common.h"
 
