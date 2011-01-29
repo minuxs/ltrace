@@ -80,7 +80,14 @@ rm -f conftest.c a.out
 CC=gcc
 CPPFLAGS=' -I /usr/include/libelf'
 CFLAGS='-g -O2'
-LIBS='-lelf -lsupc++ -liberty '
+if [ x$HAVE_LIBSUPC__ != "x" ]; then
+	LIBS='-lelf -lsupc++ '
+elif [ x$HAVE_LIBIBERTY != "x" ]; then
+	LIBS='-lelf -lsupc++ -liberty '
+else
+	echo "you must have either libsupc++ or libiberty." >&2
+	exit 1;
+fi
 INSTALL='/usr/bin/install -c'
 iquote='-iquote '
 iquoteend=''
