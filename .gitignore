@@ -3,3 +3,9 @@ Makefile
 config.h
 *.o
 *.a
+sysdeps/linux-gnu/arch_syscallent.h
+sysdeps/linux-gnu/signalent.h
+sysdeps/linux-gnu/signalent1.h
+sysdeps/linux-gnu/syscallent.h
+sysdeps/linux-gnu/syscallent1.h
+sysdeps/linux-gnu/sysdep.h
