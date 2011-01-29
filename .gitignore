@@ -1,0 +1,5 @@
+ltrace
+Makefile
+config.h
+*.o
+*.a
